@@ -1,2 +1,2 @@
-# Hafner.Compatibility.Attributes
-Defines .NET framework attributes for older frameworks where they have not yet been available. This enables to use a lot of compile features that otherwise are not available for the specific framework.
+# Hafner.Compatibility.CodeAnalysisAttributes
+Defines the System.Diagnostics.CodeAnalysis attributes in frameworks that do not support them yet.
