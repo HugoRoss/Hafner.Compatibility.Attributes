@@ -3,9 +3,7 @@
 namespace Hafner.Compatibility.Attributes.CompileTests;
 
 using System;
-using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
-using Hafner.Compatibility.Attributes.CompileTests;
 
 public static class Test_ConstantExpectedAttribute {
 
