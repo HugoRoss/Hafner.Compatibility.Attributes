@@ -11,6 +11,8 @@
     <AvailableWith_Net60>|net20|net30|net35|net40|net403|net45|net451|net452|net46|net461|net462|net47|net471|net472|net48|net481|netcoreapp1.0|netcoreapp1.1|netcoreapp2.0|netcoreapp2.1|netcoreapp2.2|netcoreapp3.0|netcoreapp3.1|netstandard1.0|netstandard1.1|netstandard1.2|netstandard1.3|netstandard1.4|netstandard1.5|netstandard1.6|netstandard2.0|netstandard2.1|net5.0|</AvailableWith_Net60>
     <AvailableWith_Net70>|net20|net30|net35|net40|net403|net45|net451|net452|net46|net461|net462|net47|net471|net472|net48|net481|netcoreapp1.0|netcoreapp1.1|netcoreapp2.0|netcoreapp2.1|netcoreapp2.2|netcoreapp3.0|netcoreapp3.1|netstandard1.0|netstandard1.1|netstandard1.2|netstandard1.3|netstandard1.4|netstandard1.5|netstandard1.6|netstandard2.0|netstandard2.1|net5.0|net6.0|</AvailableWith_Net70>
     <AvailableWith_Net80>|net20|net30|net35|net40|net403|net45|net451|net452|net46|net461|net462|net47|net471|net472|net48|net481|netcoreapp1.0|netcoreapp1.1|netcoreapp2.0|netcoreapp2.1|netcoreapp2.2|netcoreapp3.0|netcoreapp3.1|net5.0|net6.0|net7.0|netstandard1.0|netstandard1.1|netstandard1.2|netstandard1.3|netstandard1.4|netstandard1.5|netstandard1.6|netstandard2.0|netstandard2.1|</AvailableWith_Net80>
+    <ArrayEmptyBefore_Net46_Core10_Standard13>|net20|net30|net35|net40|net403|net45|net451|net452|netstandard1.0|netstandard1.1|netstandard1.2|</ArrayEmptyBefore_Net46_Core10_Standard13>
+    <ArrayEmpty_Net46_Core10_Standard13>|net46|net461|net462|net47|net471|net472|net48|net481|netcoreapp1.0|netcoreapp1.1|netcoreapp2.0|netcoreapp2.1|netcoreapp2.2|netcoreapp3.0|netcoreapp3.1|netstandard1.3|netstandard1.4|netstandard1.5|netstandard1.6|netstandard2.0|netstandard2.1|net5.0|net6.0|net7.0|net8.0|</ArrayEmpty_Net46_Core10_Standard13>
     <RootNamespace>System.Diagnostics.CodeAnalysis</RootNamespace>
     <ImplicitUsings>disable</ImplicitUsings>
     <Configurations>Debug;Release;NuGet</Configurations>
@@ -85,6 +87,18 @@
   <ItemGroup Condition="$(AvailableWith_Net40_Core20_Standard20.Contains('|$(TargetFramework)|'))">
     <None Remove="AvailableWith\Net4.0_Core2.0_Standard2.0\*.cs" />
     <Compile Include="AvailableWith\Net4.0_Core2.0_Standard2.0\*.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Array.Empty\*\*.cs" />
+    <None Include="Array.Empty\*\*.cs" />
+  </ItemGroup>
+  <ItemGroup Condition="$(ArrayEmptyBefore_Net46_Core10_Standard13.Contains('|$(TargetFramework)|'))">
+    <None Remove="Array.Empty\Before Net4.6_Core1.0_Standard1.3\*.cs" />
+    <Compile Include="Array.Empty\Before Net4.6_Core1.0_Standard1.3\*.cs" />
+  </ItemGroup>
+  <ItemGroup Condition="$(ArrayEmpty_Net46_Core10_Standard13.Contains('|$(TargetFramework)|'))">
+    <None Remove="Array.Empty\Net4.6_Core1.0_Standard1.3\*.cs" />
+    <Compile Include="Array.Empty\Net4.6_Core1.0_Standard1.3\*.cs" />
   </ItemGroup>
   <ItemGroup Condition="$(AvailableWith_Net11_Core10_Standard11.Contains('|$(TargetFramework)|'))">
     <PackageReference Include="Hafner.Compatibility.GuidAttribute" Version="1.0.7" />
