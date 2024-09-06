@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-[assembly: ComVisible(false)]
+[assembly: ComVisible(true)]
 [assembly: CLSCompliant(true)]
-[assembly: Guid("F3134D17-F516-40AD-9F35-180D493F2378")]
+[assembly: Guid("68E5A761-8A9D-4F31-B9FF-6263DA14FD1E")]

@@ -455,6 +455,12 @@ dotnet_diagnostic.CS8625.severity = error
 dotnet_diagnostic.CS8629.severity = error
 dotnet_diagnostic.CS8633.severity = error
 dotnet_diagnostic.CS8767.severity = error
+dotnet_style_operator_placement_when_wrapping = beginning_of_line
+tab_width = 4
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true:error
+dotnet_style_prefer_auto_properties = true:silent
+dotnet_style_prefer_collection_expression = true:suggestion
+dotnet_style_prefer_simplified_boolean_expressions = true:warning
 
 # CSharp code style settings: ---------------------------------------------------------------------------------------------------
 
@@ -607,9 +613,9 @@ dotnet_naming_symbols.local_variables.applicable_kinds = local
 # Watch out: Rules are not falling through, the first rule that matches is applied, therefore a default value must be placed at the end after all specific rule definitions!
 
 # Constants can be anything
-dotnet_naming_rule.constantFields_can_be_anything.severity = none
+dotnet_naming_rule.constantfields_can_be_anything.severity = none
 dotnet_naming_rule.constantFields_can_be_anything.symbols = constantFields
-dotnet_naming_rule.constantFields_can_be_anything.style = camel_case_style
+dotnet_naming_rule.constantfields_can_be_anything.style = camel_case_style
 
 # Private fields are PascalCase or camelCase (camelCase if it is a backing field for a lazy initialized getter 
 # and should not be used directly,  PascalCase if the field is supposed to be used directly)
@@ -636,6 +642,10 @@ dotnet_naming_rule.type_parameters_should_be_camel_case_with_prefix.style = pasc
 dotnet_naming_rule.members_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.members_should_be_pascal_case.symbols = all_members
 dotnet_naming_rule.members_should_be_pascal_case.style = pascal_case_style
+csharp_style_namespace_declarations = file_scoped:suggestion
+csharp_style_prefer_method_group_conversion = true:suggestion
+csharp_style_prefer_top_level_statements = false:silent
+csharp_style_prefer_primary_constructors = true:suggestion
 
 # Visual Basic code style settings ----------------------------------------------------------------------------------------------
 
